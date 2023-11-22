@@ -1,36 +1,23 @@
-// App.js
-import React from 'react';
-import { BrowserRouter as Router, Route} from 'react-router-dom';
-import { CssBaseline, Container, createTheme, ThemeProvider } from '@mui/material';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Home from './components/Home';
-import ProjectList from './components/ProjectList';
-import ProjectDetails from './components/ProjectDetails';
-import DesignTool from './components/DesignTool';
-import LoginPage from './components/LoginPage';
+import { BrowserRouter, Routes,Route } from 'react-router-dom';
+import './App.css';
+import Loginpage from './components/Loginpage'
+import MainPage from './components/MainPage';
 
-const theme = createTheme();
 
-const App = () => {
+
+
+function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Router>
-        <Container>
-          <Header />
-          <div>
-            <Route path="/" exact component={Home} />
-            <Route path="/projects" exact component={ProjectList} />
-            <Route path="/projects/:id" component={ProjectDetails} />
-            <Route path="/design" component={DesignTool} />
-            <Route path="/login" component={LoginPage} />
-          </div>
-          <Footer />
-        </Container>
-      </Router>
-    </ThemeProvider>
-  );
-};
+   
+   <BrowserRouter>
+   <Routes>
+    <Route path='/' element={<MainPage/>}></Route>
+    <Route path='/login' element={<Loginpage/>}></Route>
+   </Routes>
+   </BrowserRouter>
+   
+  )
+  
+}
 
 export default App;

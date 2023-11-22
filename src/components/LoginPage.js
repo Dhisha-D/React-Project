@@ -1,49 +1,49 @@
-// LoginPage.js
 import React, { useState } from 'react';
-import { Typography, TextField, Button } from '@mui/material';
+import { TextField , Button , Container } from '@mui/material';
+import {Link} from "react-router-dom";
+import './Login.css';
 
+const Loginpage= () => {
 
-const LoginPage = () => {
   const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const handleUsername = (event) => { 
+      setUsername(event.target.value) 
+  }
 
-  const handleLogin = () => {
-    // Implement authentication logic here
-    // For simplicity, let's assume a successful login for any non-empty username and password
-    if (username && password) {
-      // Redirect to the home page after successful login
-    }
+  const [password, setPassword] = useState('');
+  const handlePassword = (event) => { 
+      setPassword(event.target.value) 
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log('Username:', username);
+    console.log('Password:', password);
   };
 
   return (
-    <div>
-      <Typography variant="h4" gutterBottom>
-        Login
-      </Typography>
-      <form>
-        <TextField
-          label="Username"
-          variant="outlined"
-          margin="normal"
-          fullWidth
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-        />
-        <TextField
-          label="Password"
-          type="password"
-          variant="outlined"
-          margin="normal"
-          fullWidth
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <Button variant="contained" color="primary" onClick={handleLogin}>
-          Login
-        </Button>
+      <div className='area'>
+      <Container maxWidth="xs" className='big'>
+      <form onSubmit={handleSubmit}>
+      <h1>Login Page</h1>
+
+        <TextField variant="outlined" margin="normal" required fullWidth label="Username" onChange={handleUsername}>
+            {username}
+        </TextField>
+
+        <TextField variant="outlined" margin="normal" required fullWidth label="Password" type="password" onChange={handlePassword}>
+            {password}
+        </TextField>
+
+        <Link to='/'><Button type="submit"  fullWidth variant="contained" color="primary">
+              Log In
+            </Button>
+            </Link>
+
       </form>
-    </div>
+    </Container>
+      </div>
   );
 };
 
-export default LoginPage;
+export default Loginpage;
