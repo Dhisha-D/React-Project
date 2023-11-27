@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { TextField , Button , Container } from '@mui/material';
-import {Link} from "react-router-dom";
+import {Link,useNavigate} from 'react-router-dom';
+import axios from 'axios';
 import './Login.css';
 
 const Loginpage= () => {
@@ -14,11 +15,19 @@ const Loginpage= () => {
   const handlePassword = (event) => { 
       setPassword(event.target.value) 
   }
+  let navigate=useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log('Username:', username);
-    console.log('Password:', password);
+    axios.get('http://localhost:3000/login? username=${email}&password=${password}')
+    .then((res)=>{
+      if(res.data.length>0){
+      navigate("/");
+    }
+    else{
+      alert("User account doesn't exist");
+    }
+  });
   };
 
   return (
@@ -38,8 +47,8 @@ const Loginpage= () => {
         <Link to='/'><Button type="submit"  fullWidth variant="contained" color="primary">
               Log In
             </Button>
-            </Link>
-
+            </Link>
+       Don't have an account?<Link to='/signup'><span>Sign Up here</span></Link>
       </form>
     </Container>
       </div>

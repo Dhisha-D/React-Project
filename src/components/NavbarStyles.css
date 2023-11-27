@@ -8,6 +8,7 @@
     
 }
 
+
 #navbar{
     display: flex;
     align-items: center;
@@ -16,7 +17,7 @@
 
 #navbar li{
     list-style: none;
-    padding: 0 20px;
+    padding:0px;
     position: relative;
 }
 

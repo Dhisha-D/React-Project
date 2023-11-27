@@ -8,7 +8,7 @@ const Footer=()=>{
                 <div className="sb_footer-links">
                     <div className="sb_footer-links-div">
                         <a href="/employeer">
-                            <p>Employeer</p>
+                            <p>Employeer Details</p>
                         </a>
                         <a href="/service">
                             <p>Service</p>
@@ -25,12 +25,12 @@ const Footer=()=>{
                             <p>Designs</p>
                         </a>
                         <a href="/architechs">
-                            <p>Architechs</p>
+                            <p>Architechs Informations</p>
                         </a>
                     </div>
                     <div className="sb_footer-links-div">
                         <a href="employeer">
-                            <p>Partners</p>
+                            <p>Business Partners</p>
                         </a>
                     </div>
                     <div className="sb_footer-links-div">
@@ -38,10 +38,10 @@ const Footer=()=>{
                             <p>About</p>
                         </a>
                         <a href="/press">
-                            <p>Presst</p>
+                            <p>Project Models</p>
                         </a>
                         <a href="/career">
-                            <p>Career</p>
+                            <p>Career Scopes</p>
                         </a>
                         <a href="/contact">
                             <p>Contact</p>

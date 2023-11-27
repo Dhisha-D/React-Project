@@ -1,0 +1,49 @@
+.loginsignup{
+    padding-top: 0%;
+    background-position: center;
+}
+.loginsignup-fields{
+    background-color: antiquewhite;
+    opacity: 0.9;
+    padding: 30px;
+    border-radius: 15px;
+    background-position: center;
+}
+.login-signup-container{
+    background-image: url("https://i.pinimg.com/736x/76/8e/9c/768e9c58cae91adc6036da60554e89e9.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+/* Login.css */
+
+/* ... (existing styles) */
+
+/* Increase thickness of TextField border */
+.loginsignup-agree {
+    border-width: 100px !important; /* Increase thickness of the border */
+  }
+  
+  /* Increase thickness of TextField label */
+  .loginsignup-login {
+    font-weight: bold; /* Increase boldness of the label */
+  }
+ /* Login.css */
+
+/* ... (existing styles) */
+
+/* Increase thickness of TextField input text */
+.MuiInputBase-input {
+    font-weight: bold; /* Increase boldness of the text */
+  }
+  
+  /* Optional: Increase thickness of TextField label */
+  .MuiInputLabel-root {
+    font-weight: bold; /* Increase boldness of the label */
+  }
