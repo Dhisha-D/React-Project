@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes,Route } from 'react-router-dom';
+{/*import { BrowserRouter, Routes,Route } from 'react-router-dom';
 import './App.css';
 import Loginpage from './components/LoginPage';
 import SignUp from './components/SignUp';
@@ -49,4 +49,15 @@ function App() {
   )
   
 }
-export default App;
+export default App;*/}
+
+import React from 'react';
+
+ import Project3 from './December_Project/Project3';
+export default function App() {
+  return (
+    <div className="App">
+       <Project3/>
+    </div>
+  );
+}
